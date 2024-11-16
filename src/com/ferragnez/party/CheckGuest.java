@@ -11,10 +11,26 @@ public class CheckGuest {
         input.close();
 
         boolean isInvited = false;
-        for(int i = 0; i < Guests.length; i++){
-            if(Guests[i].equalsIgnoreCase(yourName)){
+        /*******
+        FOR LOOP
+        *******/
+
+        // for(int i = 0; i < Guests.length; i++){
+        //     if(Guests[i].equalsIgnoreCase(yourName)){
+        //         isInvited = true;
+        //     };
+        // };
+
+        /*********
+        WHILE LOOP
+        *********/
+
+        int j = 0;
+        while (j < Guests.length) {
+            if(Guests[j].equalsIgnoreCase(yourName)){
                 isInvited = true;
             };
+            j++;
         };
 
         if (isInvited) {
