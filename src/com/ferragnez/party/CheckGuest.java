@@ -8,5 +8,19 @@ public class CheckGuest {
         Scanner input = new Scanner(System.in);
         System.out.println("Inserisci il tuo nome e premi invio...");
         String yourName = input.nextLine();
+        input.close();
+
+        boolean isInvited = false;
+        for(int i = 0; i < Guests.length; i++){
+            if(Guests[i].equalsIgnoreCase(yourName)){
+                isInvited = true;
+            };
+        };
+
+        if (isInvited) {
+            System.out.println(yourName + " Benvenuto/a alla festa!");
+        } else{
+            System.out.println("Mi dispiace il tuo nome non è in lista, non puoi entrare.");
+        } 
     }
 }
